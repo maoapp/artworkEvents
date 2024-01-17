@@ -7,19 +7,19 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface testTests : XCTestCase
+@interface ArtworkEventsTests : XCTestCase
 
 @end
 
-@implementation testTests
+@implementation ArtworkEventsTests
 
-- (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
+- (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))ArtworkEvents
 {
-  if (test(view)) {
+  if (ArtworkEvents(view)) {
     return YES;
   }
   for (UIView *subview in [view subviews]) {
-    if ([self findSubviewInView:subview matching:test]) {
+    if ([self findSubviewInView:subview matching:ArtworkEvents]) {
       return YES;
     }
   }
